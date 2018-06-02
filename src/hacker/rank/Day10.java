@@ -1,11 +1,26 @@
 package hacker.rank;
 
+import java.util.Scanner;
+
 public class Day10 {
 
 	public static void main(String[] args) {
-		while(n > 0):
-			remainder = n%2;
-		n = n/2;
-	}
+		 Scanner in = new Scanner(System.in);
+	        int n = in.nextInt();
+	        in.close();
 
-}
+	        int sum = 0, max = 0;
+	        while (n > 0) {
+	            if (n % 2 == 1) {
+	                sum++;
+	                if (sum > max) {
+	                    max = sum;
+	                }
+	            } else {
+	                sum = 0;
+	            }
+	            n = n / 2;
+	        }
+	        System.out.println(max);
+	    }
+	}
